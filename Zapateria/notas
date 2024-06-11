@@ -1,0 +1,34 @@
+============================
+========= INFORMACION ======
+============================
+
+- Crear proyecto ASP.NET WEB con MVC
+
+---> Instalacion de EntityFramework ORM por defecto (y SQL Server)
+- Ingresar el siguiente comando para crear el DbContext: 
+	Scaffold-DbContext "Server=DESKTOP-4NE9COQ\SQLEXPRESS;Database=PruebaAPIPrendas;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+- Este comendo se debe ejecutar en la consola, donde Models es la carpeta donde se ira a guardar toda la configuracion y clases que va a generar 
+- Este mismo comando se utiliza para actualizar la configuracion, pero se le debe agregar el -force
+-------------------------------------------------------------------
+
+---> Inyectar el DbContext
+- En el Program.cs se debe agregar la siguiente configuracion
+
+	"builder.Services.AddDbContext<PruebaAPIPrendasContext>(options =>
+	{
+	    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServer"));
+	});"
+
+- Este es luego de builder.Build()
+- Con esta configuracion se realiza la inyeccion del DbContext, previo a esto debimos haber ido a agregar la cadena de conexion en el appsetting.json donde el nombre de la cadena es el parametro que le mandamos en la configuracion mostrada arriba
+
+- ViewBag para enviar utilidades a la vista
+- 
+
+
+============================
+====== PREGUNTAS Momentaneas
+============================
+
+- En la clase de context, se puede eliminar la cadena de conexion?
