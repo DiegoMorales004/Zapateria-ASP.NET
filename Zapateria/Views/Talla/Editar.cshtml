@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Agregar talla";
+    var accion = "";
+    var clase = "";
+    if (Model.IdTalla < 1)
+    {
+        accion = "Crear";
+        clase = "btn-success";
+    }
+    else
+    {
+        accion = "Editar";
+        clase = "btn-warning";
+    }
+}
+@model Zapateria.Models.Talla;
+
+<h1>Talla</h1>
+<hr />
+<br />
+<dvi class="d-flex justify-content-center" >
+    <form asp-action="Editar" method="post" class="col-8">
+        <input type="hidden" name="_method" value="PUT" />
+        <input type="hidden" name="_token" value="@(Guid.NewGuid().ToString())" />
+        <div class="mb-3">
+            <label for="IdTalla" class="form-label">ID</label>
+            <input class="form-control" value=@Model.IdTalla asp-for="IdTalla" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="TallaEuropea" class="form-label">Talla Europea</label>
+            <input class="form-control" value=@Model.TallaEuropea asp-for="TallaEuropea" type="number">
+        </div>
+        <div class="mb-3">
+            <label for="TallaAmerica" class="form-label">Talla America</label>
+            <input class="form-control" value=@Model.TallaAmerica asp-for="TallaAmerica" type="number">
+        </div>
+        <div class="mb-3">
+            <label for="TallaCentimetros" class="form-label">Talla Centimetros</label>
+            <input class="form-control" value=@Model.TallaCentimetros asp-for="TallaCentimetros" type="number">
+        </div>
+        <button type="submit" class="btn @clase">@accion</button>
+    </form>
+</dvi>

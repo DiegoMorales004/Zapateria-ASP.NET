@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "Zapato";
+    string imgNotFound = "https://th.bing.com/th/id/R.c98045cd667447def428ad9b261c0ef4?rik=y8ioZ%2bsKto28oQ&pid=ImgRaw&r=0";
+}
+@model List<Zapato>
+
+    <h1>Zapatos</h1>
+    <br />
+
+    <form asp-action="Agregar" asp-controller="Zapato" class="mb-4" >
+        <button type="submit" class="btn btn-success float-end mb-4">Agregar nuevo zapato</button>
+    </form>
+    
+
+    <table class="table align-middle" >
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Talla</th>
+                <th>Nombre</th>
+                <th>Fecha de salida</th>
+                <th>Categoria</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        @foreach (var zapato in Model)
+        {
+            <tr >
+
+                <td>
+                    @Html.ActionLink(zapato.IdZapato.ToString(), "Editar", new { id = zapato.IdZapato }, new { @class = "text-decoration-none"})
+                </td>
+                <td>@Html.DisplayFor(model => zapato.TallaNavigation.TallaEuropea)</td>
+                <td>@Html.DisplayFor(model => zapato.NombreZapato)</td>
+                <td>@zapato.FechaSalida.ToShortDateString()</td>
+                <td class=" directrion justify-content-center">@Html.DisplayFor(model => zapato.Categoria)</td>
+                
+                <!-- Si no se encuentra se mostrara una imagen de no encontrado -->
+                
+                @if (zapato.UrlImagen == null || zapato.UrlImagen.Length == 0)
+                {
+                    <td class="d-flex align-items-center justify-content-center"><img class="shadow rounded" style="max-height: 80px" src="@imgNotFound "alt="img_zapato" /></td>
+                }
+                else
+                {
+
+                <td class="d-flex align-items-center justify-content-center"><img class="shadow rounded" style="max-height: 80px" src="@Html.DisplayFor(model=>zapato.UrlImagen)" alt="img_zapato" /></td>    
+                }
+                
+                <td>
+                    <button class="btn btn-danger" >Eliminar</button>
+                </td>
+
+            </tr>
+        }
+
+        </tbody>
+
+    </table>

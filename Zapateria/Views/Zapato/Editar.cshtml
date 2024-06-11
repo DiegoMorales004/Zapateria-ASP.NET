@@ -1,0 +1,66 @@
+﻿
+@{
+
+    ViewData["Title"] = "Editar zapato";
+    string url = Model.UrlImagen ?? "https://th.bing.com/th/id/R.c98045cd667447def428ad9b261c0ef4?rik=y8ioZ%2bsKto28oQ&pid=ImgRaw&r=0";
+    var tallas = ViewBag.tallas as List<Talla>;
+    var accion = "";
+    var clase = "";
+    if(Model.IdZapato < 1)
+    {
+        accion = "Crear";
+        clase = "btn-success";
+    }
+    else
+    {
+        accion = "Editar";
+        clase = "btn-warning";
+    }
+}
+
+@model Zapateria.Models.Zapato;
+
+<div class="d-flex">
+    <div class="col-6">
+        <form asp-action="Editar" method="post" >
+            <input type="hidden" name="_method" value="PUT" />
+            <input type="hidden" name="_token" value="@(Guid.NewGuid().ToString())" />
+            <div class="mb-3">
+                <label for="IdZapato" class="form-label">ID</label>
+                <input class="form-control" value=@Model.IdZapato asp-for="IdZapato" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="Talla" class="form-label">Talla</label>
+                <!--<input class="form-control" value=@Model.Talla asp-for="Talla"> -->
+                <select class="form-control" value ="@Model.Talla" asp-for="Talla" >
+                    <option> Seleccione una talla... </option>
+
+                    @foreach (var talla in tallas)
+                    {
+                        <option value="@talla.IdTalla" > Talla Americana: @talla.TallaAmerica | Talla Europea: @talla.TallaEuropea | Talla en Centimetros: @talla.TallaCentimetros </option>
+                    }
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="NombreZapato" class="form-label">NombreZapato</label>
+                <input class="form-control" value=@Model.NombreZapato asp-for="NombreZapato">
+            </div>
+            <div class="mb-3">
+                <label for="FechaSalida" class="form-label">FechaSalida</label>
+                <input class="form-control" value="@Model.FechaSalida.ToString("yyyy-MM-dd")" asp-for="FechaSalida" type="date">
+            </div>
+            <div class="mb-3">
+                <label for="Categoria" class="form-label">Categoria</label>
+                <input class="form-control" value=@Model.Categoria asp-for="Categoria">
+            </div>
+            <div class="mb-3">
+                <label for="UrlImagen" class="form-label">UrlImagen</label>
+                <input class="form-control" value=@Model.UrlImagen asp-for="UrlImagen">
+            </div>
+            <button type="submit" class="btn @clase">@accion</button>
+        </form>
+    </div>
+    <div class=" d-flex col-6 justify-content-center align-items-center" style="max-height: 90vh">
+        <img src=@url alt="img" style="max-height: 30vh"/>
+    </div>
+</div>

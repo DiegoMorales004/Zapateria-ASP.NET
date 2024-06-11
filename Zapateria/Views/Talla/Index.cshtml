@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Talla";
+}
+
+@model List<Talla>
+
+<h1>Tallas</h1>
+
+<form asp-action="Agregar" asp-controller="Talla" >
+    <button type="submit" class="btn btn-success float-end mb-4">Agregar talla</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>talla europea</th>
+            <th>talla americana</th>
+            <th>talla centimetros</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var talla in Model)
+        {
+            <tr>
+                <td> @Html.ActionLink(talla.IdTalla.ToString(), "Editar", new { id = talla.IdTalla } ) </td>
+                <td>@Html.DisplayFor(model => talla.TallaEuropea)</td>
+                <td>@Html.DisplayFor(model => talla.TallaAmerica)</td>
+                <td>@Html.DisplayFor(model => talla.TallaCentimetros)</td>
+            </tr>
+        }
+    </tbody>
+</table>

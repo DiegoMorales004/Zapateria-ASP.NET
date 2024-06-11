@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\diego\\source\\repos\\Zapateria\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8325F685-A211-47E0-9A4F-577872FBE051}|Zapateria\\Zapateria.csproj|c:\\users\\diego\\source\\repos\\zapateria\\zapateria\\views\\zapato\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8325F685-A211-47E0-9A4F-577872FBE051}|Zapateria\\Zapateria.csproj|solutionrelative:zapateria\\views\\zapato\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8325F685-A211-47E0-9A4F-577872FBE051}|Zapateria\\Zapateria.csproj|c:\\users\\diego\\source\\repos\\zapateria\\zapateria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8325F685-A211-47E0-9A4F-577872FBE051}|Zapateria\\Zapateria.csproj|solutionrelative:zapateria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8325F685-A211-47E0-9A4F-577872FBE051}|Zapateria\\Zapateria.csproj|c:\\users\\diego\\source\\repos\\zapateria\\zapateria\\views\\talla\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8325F685-A211-47E0-9A4F-577872FBE051}|Zapateria\\Zapateria.csproj|solutionrelative:zapateria\\views\\talla\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Zapateria\\Zapateria\\Program.cs",
+              "RelativeDocumentMoniker": "Zapateria\\Program.cs",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\Zapateria\\Zapateria\\Program.cs",
+              "RelativeToolTip": "Zapateria\\Program.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAWwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T02:52:24.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Zapateria\\Zapateria\\Views\\Zapato\\Index.cshtml",
+              "RelativeDocumentMoniker": "Zapateria\\Views\\Zapato\\Index.cshtml",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\Zapateria\\Zapateria\\Views\\Zapato\\Index.cshtml",
+              "RelativeToolTip": "Zapateria\\Views\\Zapato\\Index.cshtml",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAuwAoAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-10T02:31:11.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\Zapateria\\Zapateria\\Views\\Talla\\Index.cshtml",
+              "RelativeDocumentMoniker": "Zapateria\\Views\\Talla\\Index.cshtml",
+              "ToolTip": "C:\\Users\\diego\\source\\repos\\Zapateria\\Zapateria\\Views\\Talla\\Index.cshtml",
+              "RelativeToolTip": "Zapateria\\Views\\Talla\\Index.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABkAAABsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-10T02:29:04.756Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
